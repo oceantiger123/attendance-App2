@@ -12,26 +12,26 @@ import axios from "axios";
 import Updatepassword from "./Components/updatePassword/updatepassword";
 
 const App = () => {
-  const token = window.localStorage.getItem('token');
+  // const token = window.localStorage.getItem('token');
  
-  const [auth, setAuth] = useState({});
-  useEffect(()=>{
-    (async()=>{
-      try{
-        const {data: user} = await axios.get('/auth/me', {
-          headers: {
-            authorization: token
-          }
-        })
-        setAuth(user)
-      }catch(err){
-      }
-    })()
-  },[token])
+  // const [auth, setAuth] = useState({});
+  // useEffect(()=>{
+  //   (async()=>{
+  //     try{
+  //       const {data: user} = await axios.get('/auth/me', {
+  //         headers: {
+  //           authorization: token
+  //         }
+  //       })
+  //       setAuth(user)
+  //     }catch(err){
+  //     }
+  //   })()
+  // },[token])
 
   return (
     <div>
-      {auth.id ? (
+      
         <div>
           <Navbar />
           <Routes>
@@ -43,11 +43,28 @@ const App = () => {
             <Route exact path="/updatepassword" element={<Updatepassword />} />
           </Routes>
         </div>
-      ) : (
-        <Login auth={auth} />
-        )}
+      
     </div>
   );
+  // return (
+  //   <div>
+  //     {auth.id ? (
+  //       <div>
+  //         <Navbar />
+  //         <Routes>
+  //           <Route exact path="/" element={<Home />} />
+  //           <Route exact path="/members" element={<Members />} />
+  //           <Route exact path="/members/:id" element={<Onemember />} />
+  //           <Route exact path="/dates/:id" element={<SingleDateAttendance />} />
+  //           <Route exact path="/calendar" element={<AttendentCalendar />} />
+  //           <Route exact path="/updatepassword" element={<Updatepassword />} />
+  //         </Routes>
+  //       </div>
+  //     ) : (
+  //       <Login auth={auth} />
+  //       )}
+  //   </div>
+  // );
 };
 
 export default App;

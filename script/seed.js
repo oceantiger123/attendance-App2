@@ -621,7 +621,7 @@ const {db, models: { Member, Admin}} = require('../server/db')
 //                      {date: 'Jul 02 2022'},
 //                      {date: 'Jul 01 2022'}];
 
-const dummyAdmin = [{username: "admin", password: '123'}];
+//const dummyAdmin = [{username: "admin", password: '123'}];
 
 /**
  * seed - this function clears the database, updates tables to
@@ -638,12 +638,12 @@ async function seed() {
 
   //const attendantDate = await Promise.all(dummyAttendance.map(attendDate => Member_Date.create(attendDate)))
 
-  const admin = await Promise.all(dummyAdmin.map(user => Admin.create(user)))
+  //const admin = await Promise.all(dummyAdmin.map(user => Admin.create(user)))
 
   //console.log(`seeded ${members.length}  members`)
   //console.log(`seeded ${dates.length}  dates`)
   //console.log(`seeded ${attendantDate.length}  attendantDate`)
-  console.log(`seeded ${admin.length}  admin`)
+ // console.log(`seeded ${admin.length}  admin`)
   console.log(`seeded successfully`)
   
 }
