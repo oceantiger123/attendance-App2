@@ -79,7 +79,7 @@ module.exports = Admin
       Admin.password = await bcrypt.hash(Admin.password, SALT_ROUNDS);
     }
   }
-  
+
   Admin.beforeCreate(hashPassword)
   Admin.beforeUpdate(hashPassword)
   Admin.beforeBulkCreate(Admins => Promise.all(Admins.map(hashPassword)))
