@@ -31,35 +31,35 @@ const Updatepassword = () =>{
     return (
         <div className="updatepassword">
            <form onSubmit={handleSubmit} >
-        <div style={{textAlign: "right"}}>
+        <div>
           <label htmlFor="username">
             <big>Current Username</big>
           </label>
           <input name="username" type="text" value={user.username} onChange={handleChange}/>
         </div>
-        <div style={{textAlign: "right"}}>
+        <div>
           <label htmlFor="password">
             <big>Current Password</big>
           </label>
           <input name="password" type="password" value={user.password} onChange={handleChange}/>
         </div>
-        <div style={{textAlign: "right"}}>
+        <div>
           <label htmlFor="newpassword">
             <big>New Password</big>
           </label>
           <input name="newpassword" type="password" value={user.newpassword} onChange={handleChange}/>
         </div>
-        <div style={{textAlign: "right"}}>
+        <div>
           <label htmlFor="newpasswordagain">
             <big>New Password Again</big>
           </label>
           <input name="newpasswordagain" type="password" value={user.newpasswordagain} onChange={handleChange}/>
         </div>
-        <div style={{textAlign: "right"}}>
+        <div>
           <button type="submit">Submit</button>
         </div>
         
-        <div style={{textAlign: "right"}}>{error} </div>
+        <div>{error} </div>
       </form> 
         </div>
     );
