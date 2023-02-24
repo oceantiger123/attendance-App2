@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "JWT=shh node server/index.js",
+    "start": "JWT=shh node server/index.js && node script/seed.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node script/seed.js",
     "build": "cd client && npm install && npm run build"
