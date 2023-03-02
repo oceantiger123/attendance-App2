@@ -74,7 +74,8 @@ const SingleDateAttendance = () => {
     }
   return (
     <div className="attendanceComp">
-      <div style={{width: '1000px', height: '500px'}}>
+      {/* style={{width: '1000px', height: '500px'}} */}
+      <div >
         <fieldset>
           <h3>
           The total of the following members attended on {state}:{" "}
@@ -110,7 +111,8 @@ const SingleDateAttendance = () => {
             </button>
       </fieldset>
       </div>
-      <div style={{width: '1000px', height: '500px'}}>
+      {/* style={{width: '1000px', height: '500px'}} */}
+      <div >
         <fieldset>
           <legend>Using checkbox to choose to add to the attendance</legend>
         <h3>
