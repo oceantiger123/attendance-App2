@@ -24,13 +24,14 @@ const Home = () => {
 
     return (
       <div className="home">
-        <h1 style={{ textAlign: "center" }}>Welcome to 14th Ave and 17th Ave Attendence Application</h1>
+        <h1 style={{ textAlign: "center" }}>Welcome to Attendance App</h1>
+        <h4>Please Click a day on the calendar to see attendance. If no attendance, you can click "Edit Attendance" button to add or delete attendees</h4>
         <Calendar onChange={onChange}/>
 
         {attendance.length > 0 ? (
 
       <div>
-          <h3>The total of following members attended on {date.date}: {attendance.length}</h3>
+          <h3>The number of members attended on {date.date}: {attendance.length}</h3>
           <Link to={`/dates/${date.id}`} state={date.date}>
            <button style={{margin: "10px"}}>Edit Attendance</button>  
           </Link>
@@ -49,7 +50,7 @@ const Home = () => {
       </div>
       ) : (
         <div>
-          <h3 > NO ATTENDENCE Click on any day: {date.date}</h3>
+          <h3 > NO ATTENDENCE: {date.date} "Please choose a day on calendar to see attendance, then click "Edit attendance" to add or delete attendees </h3>
           <Link to={`/dates/${date.id}`} state={date.date}>
            <button>Edit Attendance</button>  
           </Link>

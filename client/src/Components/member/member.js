@@ -53,6 +53,7 @@ const Members = () => {
           </form>
 
           <h3>Total Number of Members: {members.length}</h3>
+          <h4>To add a new member from above Or Click on a member's box to update information if needed</h4>
           <div style={{display: "flex", flexWrap: "wrap"}}>
             {members.map((member) => (
               <div style={{width: '100px', height: '100px', border: "solid", borderColor: "white"}} key={member.id}>

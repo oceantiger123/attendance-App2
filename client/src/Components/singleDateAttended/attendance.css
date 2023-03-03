@@ -1,7 +1,6 @@
 .attendanceComp {
    text-align: center;
    display: flex;
-   align-items: flex-start;
    /* justify-content: center; */
     padding-left: 30px;
     padding-right: 30px;

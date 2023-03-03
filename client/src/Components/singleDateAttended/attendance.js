@@ -78,10 +78,10 @@ const SingleDateAttendance = () => {
       <div >
         <fieldset>
           <h3>
-          The total of the following members attended on {state}:{" "}
+          The number of the following members who attended on {state}:{" "}
           {attendance.length}{" "}
         </h3>
-          <legend>Using checkbox to choose to remove from the attendance</legend>
+          <legend>Using checkbox to select, then click "Delete from attendance"</legend>
         <input 
           type="checkbox"
           name="attended-check-input" 
@@ -114,9 +114,9 @@ const SingleDateAttendance = () => {
       {/* style={{width: '1000px', height: '500px'}} */}
       <div >
         <fieldset>
-          <legend>Using checkbox to choose to add to the attendance</legend>
+          <legend>Using checkbox to select, then click "Add to attendance"</legend>
         <h3>
-          The total of the following members are NOT in attendance on {state}:{" "}
+          The number of the following members who didn't attend on {state}:{" "}
           {notAttendees.length}{" "}
         </h3>
           <input 

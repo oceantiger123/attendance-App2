@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div className="nav" style={{ display: 'flex', justifyContent: 'space-evenly', paddingTop: "30px"}}>
                     <Link to="/">Home</Link>
                     <Link to="/members">Members</Link>
-                    <Link to="/updatepassword">Update Password</Link>
+                    <Link to="/updatepassword">Update LogIn Password</Link>
                     <Link to="/logout" onClick={handleChange}>Log out</Link>
                 </div>
             </nav>
